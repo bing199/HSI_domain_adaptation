@@ -48,7 +48,7 @@ class Metric:
     def F1s(self):
         # F1 score
         ps = self.Ps()
-        rs = self.Ps()
+        rs = self.Rs()
         f1s = 2 * ps * rs / (ps + rs)
         return f1s
 
