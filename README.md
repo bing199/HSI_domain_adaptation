@@ -107,21 +107,9 @@ RGB bands: 23, 11, 07
 
 ### <a name="usage-train"></a> 训练
 
-1. 运行 train/[model]/[dataset].bat文件
-2. 或者运行如下命令
-
- ```shell
-python train/ddc/train.py configs/houston/dan_1800_average.yaml ^
-        --path ./runs/houston/dan-train ^
-        --nodes 1 ^
-        --gpus 1 ^
-        --rank-node 0 ^
-        --backend gloo ^
-        --master-ip localhost ^
-        --master-port 8886 ^
-        --seed 30 ^
-        --opt-level O2
-```
+1.修改数据集加载路径为你准备好的数据集路径
+2.复制sh任务文件内容到job.sh,然后bash运行 ~>bash job.sh
+3.实验结果保存在runs文件夹中
 
 ### <a name="usage-test"></a> 测试
 
